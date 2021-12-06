@@ -8,19 +8,20 @@ export const useAuth = () => useContext(AuthContext); //we are cearting AuthCont
 
 export const AuthProvider = ({children}) => { //react children is rendering all the jsx thay you pass to AuthProvider
     const [loading, setLoading] = useState(true);
-    const [user, setUser] = useState({});
-    const history =  useHistory();
+    const [user, setUser] = useState(null);
+    const history =  useHistory(); //call history hook
 
     useEffect(() => {
         auth.onAuthStateChanged((user) => {
             setUser(user); //get the user data
             setLoading(false); //no longer loading
-            history.push('/chats'); //renavigating to our chat app
+            if(user) history.push('/chats'); //renavigating to our chat app
         })
-    }, [user, history]); //when thong from dependecy array change, then useEffect is recalling
+    }, [user, history]); //when thong from dependency array change, then useEffect is recalling
 
-    const value = { user };
+    const value = { user };  //need to create a user object
 
+    //if not loading then show children
     return (
         <AuthContext.Provider value={value}>
             {!loading && children}
