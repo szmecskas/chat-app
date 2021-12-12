@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { AuthProvider } from "../contexts/AuthContext"
 import Chats from "./Chats"
 import Login from "./Login"
+import Video from "./Video"
 
 /*switch - render one of the routes we see (render the login form or chat component*/
 function App() {
@@ -14,7 +15,8 @@ function App() {
       <Router>
         <AuthProvider>
           <Switch> /*render one of the routes we see*/ 
-            <Route path="/chats" component={Chats} /> 
+            <Route path="/chats" component={Chats} />
+            <Route path="/chats/video" component={Video} />
             <Route path="/" component={Login} />
           </Switch>
         </AuthProvider>

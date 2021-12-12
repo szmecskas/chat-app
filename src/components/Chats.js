@@ -62,11 +62,22 @@ const Chats = () => {
 
     if(!user || loading) return 'Loading...';
 
+    const clickedVideo = () => {
+        history.push('/video'); 
+        console.log("clicked video");
+    }
+
     return (
         <div className="chats-page">
             <div className="nav-bar">
                 <div className="logo-tab">
                     V-Chat
+                </div>
+                <div className="video-tab">
+                    <button onClick={clickedVideo}>
+                        <img src="../../images/video-button.png" />
+                    </button>
+                    Video
                 </div>
                 <div onClick={handleLogout} className="logout-tab">
                     Logout
@@ -79,8 +90,12 @@ const Chats = () => {
                 userName={user.email}
                 userSecret={user.uid}
             />
+
         </div>
+        
     );
 }
+
+
 
 export default Chats;

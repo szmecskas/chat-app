@@ -34,7 +34,15 @@
 .logout-tab {
   position: absolute;
   top: 22px;
-  right: 22px;
+  left: 1460px;
+  color: white;
+  cursor: pointer;
+}
+
+.video-tab {
+  position: absolute;
+  top: 22px;
+  left: 1260px;
   color: white;
   cursor: pointer;
 }
