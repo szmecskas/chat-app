@@ -16,7 +16,7 @@ function App() {
         <AuthProvider>
           <Switch> /*render one of the routes we see*/ 
             <Route path="/chats" component={Chats} />
-            <Route path="/chats/video" component={Video} />
+            <Route path="/video" component={Video} />
             <Route path="/" component={Login} />
           </Switch>
         </AuthProvider>

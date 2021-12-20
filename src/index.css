@@ -20,6 +20,7 @@
   width: 100%;
   height: 66px;
   background-color: #002766;
+  background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
 }
 
 .logo-tab {
@@ -46,6 +47,7 @@
   color: white;
   cursor: pointer;
 }
+
 
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
