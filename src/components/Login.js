@@ -8,9 +8,13 @@ import {auth} from '../firebase'
 const Login = () => {
     return (
         <div id="login-page">
-            <div id="login-card">
-                <h2>Video chat app</h2>
-
+            
+            
+            
+           
+              <div id="login-card"> 
+              <h2>Welcome To V-Chat</h2>
+              <div class="image"></div>
                 <div 
                     className="login-button google"
                     onClick={() => auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())} //enable login with google
@@ -27,9 +31,11 @@ const Login = () => {
                 >
                     <FacebookOutlined /> Sign in with Facebook
                 </div>
-
+            
             </div>
-        </div>
+                
+         </div>
+        
     );
 }
 

@@ -3,6 +3,8 @@ import { useHistory } from 'react-router';
 import { ChatEngine } from 'react-chat-engine';
 import { auth } from '../firebase';
 import axios from 'axios';
+import { FaVideo } from 'react-icons/fa';
+
 
 import { useAuth } from '../contexts/AuthContext'; //getting the user from context
 
@@ -73,9 +75,10 @@ const Chats = () => {
                 <div className="logo-tab">
                     V-Chat
                 </div>
+                
                 <div className="video-tab">
                     <button onClick={clickedVideo}>
-                        <img src="../../images/video-button.png" />
+                    <FaVideo  font-size="15px" color="#2c2c69" size="15px"/> 
                     </button>
                     Video
                 </div>
