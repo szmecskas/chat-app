@@ -54,42 +54,82 @@
 
 /* Login Page */
 
+
 #login-page {
-  background-image: linear-gradient(#40a9ff, #096dd9);
+
   position: absolute;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
+	font-family: 'Jost', sans-serif;
+  background-color: #36096d;
+ background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
+
 }
+
 
 #login-card {
   position: relative;
-  top: calc(50vh - 144px);
-  left: calc(50vw - 210px);
-  padding-top: 36px;
-  padding-bottom: 66px;
-  width: 420px;
+  width: 500px;
+	height: 600px;
+  background: white;
+  overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 100px #000;
+  border-radius: 10 ;
   text-align: center;
-  background-color: white;
-  border-radius: 22px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: auto;
+
 }
 
+#login-card h2 {
+  text-align: center;
+  color:rgb(14, 4, 110);
+  size: 100px;
+  font-weight: bold;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  
+}
+div.image {
+  content:url("../src/login.png");
+  padding-bottom: 10px;;
+}​
+
+#login {
+  height: 460px;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
+}
+
+
 .login-button {
+  transition: all 250ms;
   cursor: pointer;
   color: white;
   padding: 12px;
-  border-radius: 8px;
+  border-radius: 10px;
   display: inline-block;
+  box-shadow: 3px 50px 100px rgb(94, 92, 92);
+  border: 1px solid #3496e7;
+  touch-action: manipulation;
+ 
 }
 
+
 .facebook {
-  background-color: #3b5998;
+  background-color: #36096d;
+  background-image: linear-gradient(315deg, #36096d 0%, #304be9 74%);
+  
 }
 
 .google {
-  background-color: #4285f4;
-  color: white;
+  background-image: linear-gradient(315deg, #045de9 0%, #04bbee 74%);
 }
 
 #loading-container {
