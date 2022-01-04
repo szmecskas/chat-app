@@ -80,7 +80,6 @@ const Chats = () => {
                     <button onClick={clickedVideo}>
                     <FaVideo  font-size="15px" color="#2c2c69" size="15px"/> 
                     </button>
-                    Video
                 </div>
                 <div onClick={handleLogout} className="logout-tab">
                     Logout
