@@ -2,16 +2,13 @@ import React from 'react'
 import { GoogleOutlined, FacebookOutlined } from '@ant-design/icons'
 //GoogleOutlined - component sign
 import firebase from "firebase/app"
-
+import "../CSS/LoginPage.css"
 import {auth} from '../firebase'
 
 const Login = () => {
     return (
         <div id="login-page">
-            
-            
-            
-           
+     
               <div id="login-card"> 
               <h2>Welcome To V-Chat</h2>
               <div class="image"></div>

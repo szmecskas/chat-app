@@ -4,7 +4,7 @@ import { ChatEngine } from 'react-chat-engine';
 import { auth } from '../firebase';
 import axios from 'axios';
 import { FaVideo } from 'react-icons/fa';
-
+import "../CSS/ChatPage.css"
 
 import { useAuth } from '../contexts/AuthContext'; //getting the user from context
 

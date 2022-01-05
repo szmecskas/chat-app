@@ -1,12 +1,11 @@
 import React from 'react'
-
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 //react-router-dom - a library that allows you to have multi-page app
 
 import { AuthProvider } from "../contexts/AuthContext"
 import Chats from "./Chats"
 import Login from "./Login"
-import Video from "./Video"
+import Video from "./Video/VideoApp"
 
 /*switch - render one of the routes we see (render the login form or chat component*/
 function App() {
