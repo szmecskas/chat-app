@@ -1,68 +1,41 @@
-.video-page {
+.VideoHome {
+	text-align: center;
+	height: 100vh;
+	flex-direction: column;
+  }
+  
+  .VideoHome-logo {
+	height: 40vmin;
+	pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+	.VideoHome-logo {
+	  animation: VideoHome-logo-spin infinite 20s linear;
+	}
+  }
+  
+  .VideoHome-header {
+	background-color: #282c34;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
-	.body {
-	  flex: 1;
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-around;
-		.content {
-		  .action-btn {
-			margin-top: 60px;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			.btn {
-			  cursor: pointer;
-			  display: flex;
-			  align-items: center;
-			  justify-content: center;
-			  font-size: 16px;
-			  padding: 15px;
-			  border: none;
-			  outline: none;
-			  background: none;
-			  border-radius: 5px;
-			  color:#d4eef1;
-			  background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
-			  text-decoration: none;
-			  .icon-block {
-				padding-right: 10px;
-			  }
-			  &:hover {
-				color: black;
-				background: #e7f8f6;
-			  }
-			}
-			.input-block {
-			  margin-left: 20px;
-			  display: flex;
-			  flex: 1;
-			  .input-section {
-				background-color: #e7f8f6;
-				position: relative;
-				margin-right: 10px;
-				.icon-block {
-				  position: absolute;
-				  top: 50%;
-				  transform: translate(10px, -50%);
-				  color: #5f6368;
-				}
-				input {
-				  font-size: 16px;
-				  height: 48px;
-				  border: 1px solid #ccc;
-				  border-radius: 5px;
-				  padding-left: 35px;
-				  width: 100%;
-				  box-sizing: border-box;
-				  outline: none;
-				}
-			  }
-			}
-		  }
-		}
-	  }
-
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
   }
+  
+  .VideoHome-link {
+	color: #61dafb;
+  }
+  
+  @keyframes VideoHome-logo-spin {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+  
