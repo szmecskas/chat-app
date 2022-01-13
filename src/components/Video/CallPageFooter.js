@@ -3,7 +3,7 @@ import { FaVideo, FaClosedCaptioning } from "react-icons/fa";
 import { MdArrowDropUp, MdOutlineStopScreenShare, MdOutlineScreenShare } from "react-icons/md";
 import { AiOutlinePhone } from "react-icons/ai";
 import { BiMicrophone, BiMicrophoneOff } from "react-icons/bi";
-import "../../../CSS/CallPageFooter.scss";
+import "../../CSS/CallPageFooter.scss";
 
 const CallPageFooter = ({
   isPresenting,

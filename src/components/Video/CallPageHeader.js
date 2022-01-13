@@ -1,7 +1,7 @@
 import React from 'react'
 import {FaUserFriends} from 'react-icons/fa';
 import {ImUser} from 'react-icons/im'
-import "../../../CSS/CallPageHeader.scss"
+import "../../CSS/CallPageHeader.scss"
 
 const CallPageHeader = () => {
     return (

@@ -1,29 +1,36 @@
 import React from 'react'
-import {ImUser} from 'react-icons/im';
 import {TiTimes} from 'react-icons/ti';
 import {AiOutlineCopy} from 'react-icons/ai';
-import "../../../CSS/MeetingInfo.scss";
+
+import "../../CSS/MeetingInfo.scss";
 
 
-const MeetingInfo = () => {
+const MeetingInfo = ({peerId, call, remotePeerIdValue, setRemotePeerIdValue, setMeetInfoPopup}) => {
     return (
         <div className="meeting-info-block">
             <div className='meeting-header'>
                 <h3>Your meeting's ready</h3>
-                <TiTimes className='icon' />
+                <TiTimes className='icon' onClick={() => {
+                    setMeetInfoPopup(false);
+                }} />
             </div>
-            <button class="add-people-btn">
-                <ImUser className='icon' />
-                Add participants
-            </button>
-            <p className='info'>
-                Or share the meeting link.
-            </p>
-            <div className='meet-link'>
+            <br/>
+            {/* <div className='meet-link'>
                 <span>Random URL</span>
                 <AiOutlineCopy className='icon' />
+            </div> */}
+            < div className='meet-link'>
+                <div><span>{peerId} </span>
+                <AiOutlineCopy className='icon' onClick={() => {
+                    navigator.clipboard.writeText(peerId);
+                }} />
+                </div>
+                <br/>
+                <div>
+                    <input type="text" value={remotePeerIdValue} onChange={e => setRemotePeerIdValue(e.target.value)} placeholder="ID to call "/>
+                    <button onClick={() => call(remotePeerIdValue)}>Call</button>
+                </div>
             </div>
-            <p className='small-text'>Joined as lidia.szm@gmail.com</p>
         </div>
     );
 }
