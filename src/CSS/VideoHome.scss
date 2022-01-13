@@ -1,38 +1,26 @@
 .VideoHome {
-	text-align: center;
-	display: flex;
+	
+	//display: flex;
 	height: 100vh;
-	flex-direction: column;
+	//flex-direction: column;
 	position: absolute;
     top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
     font-family: 'Jost', sans-serif;
-    background-color: #36096d;
     background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
-
-	background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
 	.body {
-		.content{
-			.video-container{
-				// flex: 1;
-				// display: flex;
-				// flex-direction: row;
-				// width: 50px;
-    			// height: 60px;
-				// justify-content: center;
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-				gap: 1em;
-				height: 50%;
-				width: 50%;
-				grid-template-rows: 100px 500px 100px;
-				grid-template-columns: 100px 600px;
-			}
-		}
+		.video-container {
+			position: relative;
+			top: 50px;
+			// left: 0px;
+			width: 1300px;
+			height: 400px;
+    		margin: auto;	
 	}
   }
+}
   
   .VideoHome-logo {
 	height: 40vmin;

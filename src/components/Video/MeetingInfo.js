@@ -15,10 +15,6 @@ const MeetingInfo = ({peerId, call, remotePeerIdValue, setRemotePeerIdValue, set
                 }} />
             </div>
             <br/>
-            {/* <div className='meet-link'>
-                <span>Random URL</span>
-                <AiOutlineCopy className='icon' />
-            </div> */}
             < div className='meet-link'>
                 <div><span>{peerId} </span>
                 <AiOutlineCopy className='icon' onClick={() => {
@@ -26,9 +22,9 @@ const MeetingInfo = ({peerId, call, remotePeerIdValue, setRemotePeerIdValue, set
                 }} />
                 </div>
                 <br/>
-                <div>
-                    <input type="text" value={remotePeerIdValue} onChange={e => setRemotePeerIdValue(e.target.value)} placeholder="ID to call "/>
-                    <button onClick={() => call(remotePeerIdValue)}>Call</button>
+                <div className="div">
+                    <input className="input" type="text" value={remotePeerIdValue} onChange={e => setRemotePeerIdValue(e.target.value)} placeholder="ID to call "/>
+                    <button className="call-button" onClick={() => call(remotePeerIdValue)}>Call</button>
                 </div>
             </div>
         </div>

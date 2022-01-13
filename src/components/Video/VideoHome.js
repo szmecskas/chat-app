@@ -28,9 +28,6 @@ function VideoHome() {
 getLocalStream();
 
   useEffect(() => {
-    navigator.getUserMedia({audio:true,video:true}, function(stream) {
-      stream.getTracks().forEach(x=>x.stop());
-    }, err=>console.log(err));
     const peer = new Peer();
 
     peer.on('open', (id) => {
@@ -75,30 +72,20 @@ getLocalStream();
     
     <div className="VideoHome">
        <div className="body">
-          <div className='content'>
-          <CallPageHeader />
-          <CallPageFooter />
-          <br/>
-          {/* < div className='meet-link'>
-            <span>{peerId}</span>
-            <AiOutlineCopy className='icon' onClick={() => {
-                navigator.clipboard.writeText(peerId);
-            }} />
-          </div> */}
-          {meetInfoPopup && (
-            <MeetingInfo peerId={peerId} remotePeerIdValue={remotePeerIdValue} 
-            setMeetInfoPopup={setMeetInfoPopup} setRemotePeerIdValue={setRemotePeerIdValue} call={call} />
-          )}
-          <br/>
-          {/* <input type="text" value={remotePeerIdValue} onChange={e => setRemotePeerIdValue(e.target.value)} placeholder="ID to call "/>
-          <button onClick={() => call(remotePeerIdValue)}>Call</button> */}
-          <div>
-              <video ref={currentUserVideoRef} />
-          </div>
-          <div className='video-container'>
-              <video ref={remoteVideoRef} />
-          </div>
-        </div>
+            <div><CallPageHeader /> </div>
+            <div><CallPageFooter /></div>
+            <br/>
+            <div>
+            {meetInfoPopup && (
+              <MeetingInfo peerId={peerId} remotePeerIdValue={remotePeerIdValue} 
+              setMeetInfoPopup={setMeetInfoPopup} setRemotePeerIdValue={setRemotePeerIdValue} call={call} />
+            )}
+            </div>
+            <br/>
+            <div className="video-container">
+              <video classNme="video-item1" ref={currentUserVideoRef} />
+              <video classNme="video-item2" ref={remoteVideoRef} />
+            </div>
         </div>
     </div>
   );
